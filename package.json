@@ -1,0 +1,28 @@
+{
+  "name": "news-scrapper",
+  "version": "1.0.0",
+  "description": "A site where people can register and create posts.  Upon loading the home page, the user should see news scrapped by me.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guhuyan/News-Scrapper.git"
+  },
+  "keywords": [
+    "news",
+    "scrap",
+    "scrapper",
+    "register",
+    "user",
+    "login",
+    "logout"
+  ],
+  "author": "Gue H. Yang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guhuyan/News-Scrapper/issues"
+  },
+  "homepage": "https://github.com/Guhuyan/News-Scrapper#readme"
+}
