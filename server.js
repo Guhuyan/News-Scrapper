@@ -31,15 +31,27 @@ app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//
+var MONGODB_URI =
+  process.env.MONGODB_URI || "mongodb://localhost/news-scrapper";
+
+mongoose.connect(MONGODB_URI);
+
 // Handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/MAKE A DB", {
-  useNewUrlParser: true
+mongoose.connect("mongodb://localhost/news-scrapper", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
 // Router
 app.use("/", router);
+
+// Start the server
+app.listen(PORT, function() {
+  console.log("App running on port " + PORT + "!");
+});
